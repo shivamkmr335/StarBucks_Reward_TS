@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import HeadlessUI from "./headlessUI";
 import {MenuIcon} from "@heroicons/react/outline";
+import {Link} from 'react-router-dom';
 
 function Header() {
 
@@ -17,8 +18,8 @@ function Header() {
                 </div>
             </li>
             <li className="py-6 px-3 font-medium"><a href="https://www.google.com/">MENU</a></li>
-            <li className="py-6 px-3 font-medium border-b-8 border-green-700"><a href="https://www.google.com/">REWARDS</a></li>
-            <li className="py-6 px-3 font-medium"><a href="https://www.google.com/">GIFT CARDS</a></li>
+            <li className="py-6 px-3 font-medium border-b-8 border-green-700"><Link to="/rewards">REWARDS</Link></li>
+            <li className="py-6 px-3 font-medium"><Link to="/gift">GIFT CARDS</Link></li>
         </ul>
         <div className="flex items-center">
             <a className="mr-8 font-semibold text-sm" href="https://www.starbucks.com/rewards"><svg className="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 2.009c-2.762 0-5 2.229-5 4.99 0 4.774 5 11 5 11s5-6.227 5-11c0-2.76-2.238-4.99-5-4.99zm0 7.751a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/></svg>Find a store</a>

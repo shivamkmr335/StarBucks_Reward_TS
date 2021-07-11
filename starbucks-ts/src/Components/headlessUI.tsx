@@ -1,6 +1,8 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { useState, Fragment } from 'react';
 import {ChevronRightIcon , ChevronLeftIcon , XIcon  } from "@heroicons/react/outline";
+import {Link} from 'react-router-dom';
+
 
 interface Props {
     title?: string;
@@ -33,8 +35,8 @@ const HeadlessUI: React.FC<Props> = (props) => {
             <div className="fixed top-10 right-0 h-screen w-1/2  z-20 p-5 bg-white transform font-myFont">
               <div className="py-8">
                 <button onClick={()=>setOpenSub(true)} className="py-2 text-lg w-full flex justify-between "><span>Menu</span> <span><ChevronRightIcon className="h-5 w-5 inline-block" /></span></button>
-                <button onClick={()=>props.onClose(false)} className="py-2 text-lg w-full text-left">Rewards</button>
-                <button onClick={()=>props.onClose(false)} className="py-2 text-lg w-full text-left">Gift Cards</button>
+                <button onClick={()=>props.onClose(false)} className="py-2 text-lg w-full text-left"><Link to="/rewards">REWARDS</Link></button>
+                <button onClick={()=>props.onClose(false)} className="py-2 text-lg w-full text-left"><Link to="/gift">GIFT CARDS</Link></button>
               </div>
               <hr className="h-6" />
               <a className="inline-block text-sm font-semibold border  border-black py-1 px-3 rounded-full " href="https://www.starbucks.com/rewards">Sign in</a>
